@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ..............................................Background................................. */
+
+
+
+#background {
+    background-image: url("../assets/bg.jpg");
+    height: 46.1rem;
+    width: 96rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: hue-rotate(90deg) brightness(10%);
+    animation: bg 6s linear 2s 1 forwards;
+   
+}
+
+@keyframes bg {
+    from{
+        filter: hue-rotate(90deg) brightness(15%);
+    }
+    to{
+        filter: hue-rotate(0) brightness(100%);
+
+    }
+}
+
+
+/* ...................................  Sun  ............................... */
+
+#sun{
+    position: absolute;
+    left: 30rem;
+    top: 15rem;
+    height: 0;
+    animation: sun 7s linear 3s 1 forwards;
+}
+@keyframes sun {
+    from{
+        top: 15rem;
+        height: 0;
+    }
+    to {
+        top: 6rem;
+        height: 6rem;
+    }
+}
+
+
+
+/* ..............................................Train................................. */
+
+#train {
+    position: absolute;
+    right: 0;
+    top: 13.3rem;
+    height: 0;
+    z-index: 1;
+    animation: train 6s linear 5s 1 forwards;
+}
+
+@keyframes train {
+    from {
+        right: 0;
+        height: 25rem;
+    }
+    to {
+        right: 100%;
+        height: 25rem;
+    }
+}
+
+
+
+/* ..............................................Cycle 1................................. */
+
+
+#cycle1{
+    position: absolute;
+    left: 0rem;
+    top: 16rem;
+    height: 0rem;
+    animation: cycle-in 3.5s linear 8s  , cycle-in-out 3s linear 11.5s , cycle-out 2s linear 14.5s;
+    animation-fill-mode:forwards ; 
+    
+}
+@keyframes cycle-in{
+    from{
+        left: 0rem;
+        top: 16rem;
+        height: 4.5rem;
+    }
+    to{
+        left: 30rem;
+        top: 23.5rem;
+        height: 2.5rem;
+    }
+}
+
+@keyframes cycle-in-out{
+    from{
+        left:30rem;
+        top: 23.5rem;
+        height: 2.5rem;
+    }
+    to{
+        left: 36rem;
+        top: 22.5rem;
+        height: 1rem;
+    }
+}
+@keyframes cycle-out{
+    from{
+        left: 36rem;
+        top: 22.5rem;
+        height: 1rem;
+    }
+    to{
+       left: 38rem; 
+       top:23.5rem;
+       height: 0;
+
+    }
+}
+
+
+/* ..............................................Cycle 2................................. */
+
+
+
+#cycle2 {
+    position: absolute;
+    right: 0;
+    top: 23.5rem;
+    height: 0;
+    z-index: 1;
+    animation: cycle 8s linear 15s 1 forwards;
+}
+
+@keyframes cycle {
+    from {
+        right: 0;
+        height: 5rem;
+    }
+    to {
+        right: 100%;
+        height: 5rem;
+    }
+}
+
+
+/* ..............................................Fish................................. */
+
+.fish article {
+    position: absolute;
+    opacity: 0;
+    animation: fish 6s 7s 2;
+}
+
+#a,
+#b {
+    top: 28rem;
+}
+
+#c,
+#d {
+    top: 22rem;
+}
+
+#a {
+    right: 38rem;
+}
+
+#b {
+    right: 41rem;
+}
+
+#c {
+    right: 27rem;
+}
+
+#d {
+    right:29rem;
+}
+
+@keyframes fish {
+    form {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
